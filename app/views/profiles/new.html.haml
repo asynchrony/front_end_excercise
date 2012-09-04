@@ -1,0 +1,41 @@
+.createProfile
+  %h2 Create a profile
+  
+  = form_for profile, :url => profiles_path, :method => :post do |f|
+
+    %h3 General info
+    = label :profiles, :first_name, :class => 'required'
+    = f.text_field 'first_name'
+
+    %br
+    = label :profiles, :last_name, :class => 'required'
+    = f.text_field 'last_name'
+
+    %br
+    = label :profiles, :email
+    = f.text_field 'email'
+
+    %br
+    = label :profiles, :date_of_birth
+    = f.text_field 'date_of_birth'
+
+    %br
+    %h3 Gender
+    = label :profiles, :gender, 'Male'
+    = f.radio_button 'gender', 'm'
+    = label :profiles, :gender, 'Female'
+    = f.radio_button 'gender', 'f'
+
+    %br
+    %h3 Annual Income
+    = label :profiles, :income, '< $1'
+    = f.radio_button 'income', '1'
+
+    = label :profiles, :income, 'About $1'
+    = f.radio_button 'income', '2'
+
+    = label :profiles, :income, '> $1'
+    = f.radio_button 'income', '3'
+
+    %br
+    = f.submit 'Submit'

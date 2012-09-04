@@ -1,0 +1,8 @@
+.profileIndex
+  %h3 Profiles List
+  %table
+    = render :partial => 'profiles/profile_header'
+    %tbody
+      = render :partial => 'profiles/profile', :collection => profiles
+  %br
+  = link_to 'create a profile', new_profile_path
