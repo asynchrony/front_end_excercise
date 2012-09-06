@@ -14,3 +14,65 @@ thead {
 td {
   background: #add8e6
 }
+
+
+
+html, body, h1, h2, h3, form, input, label {
+  margin: 0;
+  padding: 0;
+}
+html {
+  background: #ccc;
+  color:  #68bfe3;
+}
+body {
+}
+.createProfile {
+  width:  590px;
+  margin: 40px auto 0 auto;
+  background: #fff;
+  padding:  40px 0 0 0;
+}
+
+h2 {
+  font-size: 20px/24px;
+  font-family: Arial;
+  font-weight: normal;
+  padding:    0 0 20px 40px;
+  border-bottom: 1px solid #ebebeb;
+  margin-bottom: 20px;
+}
+
+h3 {
+  display: none;
+}
+
+.namez, .attz {
+  margin: 40px;
+  clear: both;
+  label {
+    display: none;
+  }
+}
+
+.namez input,
+#profile_email {
+  border: 1px solid #c7cacc;
+  color:  #68bfe3;
+  font-size: 14px;
+  padding:  10px 20px;
+  height: 20px;
+  width: 175px;
+  border-radius: 2px;
+  float: left;
+  margin: 0 15px 20px 0 ;
+}
+#profile_email {
+  width:  200px;
+  padding-right: 40px;
+  background: asset-url('imgs.png', image) no-repeat 200px 0;
+}
+
+select {
+
+}

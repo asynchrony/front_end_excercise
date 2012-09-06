@@ -1,24 +1,24 @@
 .createProfile
-  %h2 Create a profile
+  %h2 Please Register
   
   = form_for profile, :url => profiles_path, :method => :post do |f|
 
     %h3 General info
-    = label :profiles, :first_name, :class => 'required'
-    = f.text_field 'first_name'
+    .namez
+      = label :profiles, :first_name, :class => 'required'
+      = f.text_field 'first_name', {placeholder: 'First Name'}
 
-    %br
-    = label :profiles, :last_name, :class => 'required'
-    = f.text_field 'last_name'
+      = label :profiles, :last_name, :class => 'required'
+      = f.text_field 'last_name', {placeholder: 'Last Name'}
 
-    %br
-    = label :profiles, :email
-    = f.text_field 'email'
+    .attz
+      .emailz
+        = label :profiles, :email
+        = f.text_field 'email', {placeholder: 'Email'}
 
-    %br
-    = label :profiles, :date_of_birth, 'Birthday'
-    .birthDay
-      = f.date_select :date_of_birth
+      = label :profiles, :date_of_birth, 'Birthday'
+      .birthDay
+        = f.date_select :date_of_birth
 
     %br
     %h3 Gender
