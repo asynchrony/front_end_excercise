@@ -16,8 +16,9 @@
     = f.text_field 'email'
 
     %br
-    = label :profiles, :date_of_birth
-    = f.text_field 'date_of_birth'
+    = label :profiles, :date_of_birth, 'Birthday'
+    .birthDay
+      = f.date_select :date_of_birth
 
     %br
     %h3 Gender
