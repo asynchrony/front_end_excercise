@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// Colors.
+$blue: rgba(104, 191, 227, 1);
+$greybg: #eee;
+
 table{
   border: 1px solid blue;
 }
@@ -14,3 +18,113 @@ thead {
 td {
   background: #add8e6
 }
+
+// General styles
+body {
+	background: $greybg;
+	color: $blue;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+	margin: 0;
+}
+
+.clearfix {
+	clear: both;
+}
+
+// Profile.
+.wrapper {
+	font-size: .826em;
+}
+
+.createProfile {
+	background: #fff;
+	border: 1px solid #ccc;
+	margin: 4em auto 1em;
+	width: 600px;
+}
+
+.createProfile h2 {
+	border-bottom: 1px solid #ddd;
+	padding: 2em 1.3em 1em;
+}
+
+.createProfile form {
+	padding: 2em;
+}
+
+.createProfile h3 {
+	display: none;
+}
+
+// General input styling.
+.createProfile input,
+.createProfile select {
+	color: $blue;
+	border: 1px solid #999;
+	border-radius: .2em;
+	font-size: 1.1em;
+	padding: .75em 1em;
+}
+
+.createProfile .field {
+	background-color: $greybg;
+	border: 1px solid #e8e8e8;
+	border-radius: .5em;
+	padding: .25em;
+}
+
+.createProfile .first,
+.createProfile .last,
+.createProfile .email,
+.createProfile .gender,
+.createProfile .birthdate {
+	display: inline-block;
+	margin: 0 1em 1em 0;
+}
+
+.createProfile .first label,
+.createProfile .last label,
+.createProfile .email label,
+.createProfile .birthdate label {
+	display: none;
+}
+
+.createProfile .email input {
+	background: #fff image-url("mail-envelope.png") no-repeat 95% 50%;
+	padding-right: 40px;
+}
+
+.createProfile .gender {
+	background: none;
+	border: none;
+	margin-left: 1em;
+}
+
+.createProfile .gender-male,
+.createProfile .gender-female {
+	position: absolute;
+	top: -100px;
+}
+
+.createProfile .gender label {
+	background: #fff image-url("radio-off.png") no-repeat 0 0;
+	display: inline-block;
+	height: 22px;
+	padding: 5px 0 0 30px;
+	margin-right: 1em;
+}
+
+.createProfile .gender .on {
+	background-image: image-url("radio-on.png");
+}
+
+
+.createProfile .submit {
+	text-align: right;
+}
+
