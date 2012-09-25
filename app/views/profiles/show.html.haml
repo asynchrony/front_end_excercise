@@ -1,9 +1,9 @@
 .profileDetails
-  %h3 Profile details for #{profile.first_name} #{profile.last_name}.
+  %h3 Profile details for #{@profile.first_name} #{@profile.last_name}.
   %table
     = render :partial => 'profile_header'
     %tbody
-      = render :partial => 'profile', :locals => {:profile => profile}
+      = render :partial => 'profile', :locals => {:profile => @profile}
 
   %br
   = link_to 'Back to profiles list', profiles_path

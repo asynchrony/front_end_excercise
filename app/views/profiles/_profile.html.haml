@@ -11,5 +11,16 @@
     = profile.income
   %td
     = profile.date_of_birth
+  - if profile.location
+    %td
+      = profile.location.street
+    %td
+      = profile.location.city
+    %td
+      = profile.location.state
+    %td
+      = profile.location.zip
+    %td
+      = profile.location.country
   %td
     = profile.created_at

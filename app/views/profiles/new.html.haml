@@ -1,7 +1,7 @@
 .createProfile
   %h2 Create a profile
-  
-  = form_for profile, :url => profiles_path, :method => :post do |f|
+
+  = form_for @profile, :url => profiles_path, :method => :post do |f|
 
     %h3 General info
     = label :profiles, :first_name, :class => 'required'
@@ -37,6 +37,27 @@
 
     = label :profiles, :income, '> $1'
     = f.radio_button 'income', '3'
+
+    = f.fields_for :location do |l|
+      %br
+      = label :location, :street, :class => 'required'
+      = l.text_field 'street'
+
+      %br
+      = label :location, :city, :class => 'required'
+      = l.text_field 'city'
+
+      %br
+      = label :location, :state, :class => 'required'
+      = l.text_field 'state'
+
+      %br
+      = label :location, :zip, :class => 'required'
+      = l.text_field 'zip'
+
+      %br
+      = label :location, :country, :class => 'required'
+      = l.text_field 'country'
 
     %br
     = f.submit 'Submit'
