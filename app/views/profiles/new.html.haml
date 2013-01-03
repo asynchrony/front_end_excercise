@@ -3,31 +3,31 @@
   
   = form_for profile, :url => profiles_path, :method => :post do |f|
 
-    %h3 General info
+
     = label :profiles, :first_name, :class => 'required'
-    = f.text_field 'first_name'
+    = f.text_field 'first_name', :placeholder => 'First Name'
 
-    %br
+    
     = label :profiles, :last_name, :class => 'required'
-    = f.text_field 'last_name'
+    = f.text_field 'last_name', :placeholder => 'Last Name'
 
-    %br
+    
     = label :profiles, :email
-    = f.text_field 'email'
+    = f.text_field 'email', :placeholder => 'Email'
 
-    %br
+    .gender
+      = label :profiles, :gender, 'Male'
+      = f.radio_button 'gender', 'm'
+      = label :profiles, :gender, 'Female'
+      = f.radio_button 'gender', 'f'
+
+    
     = label :profiles, :date_of_birth, 'Birthday'
     .birthDay
       = f.date_select :date_of_birth
 
-    %br
-    %h3 Gender
-    = label :profiles, :gender, 'Male'
-    = f.radio_button 'gender', 'm'
-    = label :profiles, :gender, 'Female'
-    = f.radio_button 'gender', 'f'
 
-    %br
+    
     %h3 Annual Income
     = label :profiles, :income, '< $1'
     = f.radio_button 'income', '1'
@@ -38,7 +38,7 @@
     = label :profiles, :income, '> $1'
     = f.radio_button 'income', '3'
 
-    %br
+    
     = f.submit 'Submit'
 
   %br

@@ -2,6 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+body{
+	background-color: #e5e2e0;
+	font-family: Arial;
+	color: #68bfe3;
+}
+
 table{
   border: 1px solid blue;
 }
@@ -13,4 +19,67 @@ thead {
 
 td {
   background: #add8e6
+}
+h2{
+	padding:40px 40px 16px;
+	margin:0px;
+}
+input, select{
+	color: #68bfe3;
+	font-size: 12px;
+}
+#profile_first_name,
+#profile_last_name,
+#profile_email
+{
+	border: 1px solid #c7cacc;
+	border-radius: 1px;
+	box-shadow: 0 0 0 8px #f2f2f2,
+				0 0 0 9px #ececec,
+				0 0 0 10px #f1f1f1;
+	margin:10px 40px 30px 10px;
+	padding:5px;
+	width:181px;
+	float:left;
+}
+select{
+	
+}
+label{
+	display:none;
+}
+.createProfile{
+	background-color:#fff;
+	height: 360px;
+	margin: 40px auto;
+	width: 594px;
+}
+#new_profile{
+	border-top:1px solid #ebebeb;
+	padding:14px 40px;
+}
+#profile_email{
+	background: url("data:image/gif;base64,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") no-repeat scroll 197px 7px transparent;
+	padding-right:30px;
+}
+
+.gender{
+	float: left;
+	margin: 16px;
+	width: 200px;
+	label{
+		display:inline-block;
+	}
+}
+
+.birthDay{
+	select{
+		width:71px;
+		border:1px solid #c7cacc;
+		padding:8px;
+		border-radius:4px;
+	}
+	#profile_date_of_birth_2i{
+		width:90px;
+	}
 }
