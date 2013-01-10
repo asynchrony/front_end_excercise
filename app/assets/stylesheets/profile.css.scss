@@ -2,6 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+body {
+	color:#68bfe3;
+	font-family:Arial,Helvetica,sans-serif;
+}
+
+hr {
+	color:#ebebeb;
+}
+
 table{
   border: 1px solid blue;
 }
@@ -13,4 +22,72 @@ thead {
 
 td {
   background: #add8e6
+}
+
+.createProfile {
+	background-color:#e4e1df;
+	padding:45px;
+}
+
+.form-wrapper {
+	background-color:#fff;
+	position:relative;
+	width:592px;
+}
+
+.form-wrapper h3 {
+	font-size:20px;
+	font-weight:bold;
+	margin:0;
+	padding:50px 40px 15px;
+}
+
+form {
+	background-color:#fff;
+	padding:15px 0 20px;
+	width:100%;
+}
+
+
+form input {
+	background-color:#fff;
+	border:1px solid #ebebeb;
+	border-radius:2px;
+	color:#68bfe3;
+	font-size:12px;
+	line-height:12px;
+	margin:0 15px 15px 0;
+	padding:10px;
+
+}
+
+form input[placeholder="Email"]{
+	background-image: asset-url('email-icon.png', image);
+	background-repeat: no-repeat;
+	background-position: 98% center;
+	padding-right:30px;
+}
+
+form input[type="radio"]{
+	background-image: asset-url('radio-sprite.png', image);
+	height:23px;
+	margin:0 10px 0 0;
+	width:23px;
+}
+
+
+.clip {
+    background: asset-url('clip.png', image);
+	height:32px;
+	position:absolute;
+	top:-16px;
+	width:18px;
+}
+
+.clip.left-clip {
+	left:120px;
+}
+
+.clip.right-clip {
+	right:120px;
 }

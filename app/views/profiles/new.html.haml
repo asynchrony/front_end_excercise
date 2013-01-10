@@ -1,46 +1,43 @@
 .createProfile
-  %h2 Create a profile
   
-  = form_for profile, :url => profiles_path, :method => :post do |f|
+  .form-wrapper
+    .clip.left-clip
+    .clip.right-clip
 
-    %h3 General info
-    = label :profiles, :first_name, :class => 'required'
-    = f.text_field 'first_name'
+    %h3 Please Register
+    %hr
 
-    %br
-    = label :profiles, :last_name, :class => 'required'
-    = f.text_field 'last_name'
+    = form_for profile, :url => profiles_path, :method => :post do |f|
 
-    %br
-    = label :profiles, :email
-    = f.text_field 'email'
 
-    %br
-    = label :profiles, :date_of_birth, 'Birthday'
-    .birthDay
-      = f.date_select :date_of_birth
+      = f.text_field 'first_name', :placeholder => 'First Name'
 
-    %br
-    %h3 Gender
-    = label :profiles, :gender, 'Male'
-    = f.radio_button 'gender', 'm'
-    = label :profiles, :gender, 'Female'
-    = f.radio_button 'gender', 'f'
+      = f.text_field 'last_name', :placeholder => 'Last Name'
 
-    %br
-    %h3 Annual Income
-    = label :profiles, :income, '< $1'
-    = f.radio_button 'income', '1'
 
-    = label :profiles, :income, 'About $1'
-    = f.radio_button 'income', '2'
+      %br
+      = f.text_field 'email', :placeholder => 'Email'
 
-    = label :profiles, :income, '> $1'
-    = f.radio_button 'income', '3'
+      = f.radio_button 'gender', 'm'
+      = label :profiles, :gender, 'Male'
+      = f.radio_button 'gender', 'f'
+      = label :profiles, :gender, 'Female'
 
-    %br
-    = f.submit 'Submit'
+      %br
+      = label :profiles, :date_of_birth, 'Birthday'
+      .birthDay
+        = f.date_select :date_of_birth
 
-  %br
-  %br
-  = link_to 'what this should look like..', '/form.jpg', :target => '_blank'
+      %br
+      %h3 Annual Income
+      = label :profiles, :income, '< $1'
+      = f.radio_button 'income', '1'
+
+      = label :profiles, :income, 'About $1'
+      = f.radio_button 'income', '2'
+
+      = label :profiles, :income, '> $1'
+      = f.radio_button 'income', '3'
+
+      %br
+      = f.submit 'Submit'
