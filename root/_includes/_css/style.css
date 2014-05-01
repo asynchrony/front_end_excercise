@@ -1,0 +1,52 @@
+body {
+	background: #ccc;
+}
+
+input {
+	color: #64BCDF;
+	background: #eee;
+	border: solid 1px #ccc;
+	border-radius: 3px;
+	padding: 10px;
+}
+
+#header {
+	border-bottom: solid 1px #ccc;
+	padding: 30px 30px 10px; 
+}
+
+#registration {
+	font-family: Arial, Helvetica, 'sans-serif';
+	background: white;
+	margin: auto 0;
+	display: block;
+	width: 600px;
+	position: relative;
+}
+
+#registration h1.h2 {
+	color: #64BCDF;
+	font-size: 16px;
+}
+
+input[type=submit] {
+	background: #64BCDF;
+	color: white;
+	padding: 13px 25px;
+	font-size: 13px;
+	float: right;
+}
+
+form {
+	padding: 30px;
+}
+
+
+.full-name input { width: 250px; }
+.full-name input {
+	margin-right: 15px;
+}
+
+.clearDiv {
+	clear: both;
+}
