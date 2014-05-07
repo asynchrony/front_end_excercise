@@ -1,18 +1,19 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.6'
+gem 'rails'
+gem 'activerecord'
 gem 'haml'
 gem 'sass'
-gem 'decent_exposure', '~>1.0.2'
+gem 'decent_exposure'
 
 gem 'sqlite3'
 
 
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
+  gem 'sass-rails'
+  gem 'coffee-rails'
 
-  gem 'uglifier', '>= 1.0.3'
+  gem 'uglifier'
 end
 
 gem 'jquery-rails'
